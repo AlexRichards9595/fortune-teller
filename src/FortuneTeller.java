@@ -25,7 +25,13 @@ public class FortuneTeller {
 		System.out.println("Please enter the number of siblings that you have:");
 		int siblings = input.nextInt();
 		
-		
+		int retirementYears;
+		if (age%2 == 0) {
+			retirementYears = 3;
+		} else { 
+			retirementYears = 37;
+		}
+		System.out.println(retirementYears);
 	}
 
 }
