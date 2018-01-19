@@ -120,10 +120,7 @@ public class FortuneTeller {
 			bankAccount = 0.00;
 		}
 
-		// *[First Name]* *[Last Name]* will retire in *[# of years]* with *[bank
-		// balance]* in the bank,
-		// a vacation home in *[location]*, and travel by *[mode of transportation]*.
-
+		// Final output
 		System.out.println(firstName.trim() + " " + lastName.trim() + " will retire in " + retirementYears
 				+ " years with $" + bankAccount + " in the bank, a vacation home in " + vacationHome
 				+ ", and travel by " + transportation + ".");
