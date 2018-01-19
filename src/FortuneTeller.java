@@ -3,38 +3,53 @@ import java.util.Scanner;
 public class FortuneTeller {
 
 	public static void main(String[] args) {
-		
+
 		Scanner input = new Scanner(System.in);
-		
-		//Getting all the information
+
+		// Getting all the information
 		System.out.println("Please enter your first name:");
 		String firstName = input.next();
+		if (firstName.equalsIgnoreCase("quit")) {
+			System.out.println("Nobody likes a quitter...");
+			System.exit(0);
+		}
+
 		System.out.println("Please enter your last name:");
 		String lastName = input.next();
+		if (lastName.equalsIgnoreCase("quit")) {
+			System.out.println("Nobody likes a quitter...");
+			System.exit(0);
+		}
+
 		System.out.println("Please enter your age:");
 		int age = input.nextInt();
 		System.out.println("Please enter your birth month:");
 		int birthMonth = input.nextInt();
-		System.out.println("Please enter your favorite color");
+
+		System.out.println("Please enter your favorite ROYGBIV color");
 		System.out.println("If you do not know what ROYGBIV is, please type \"help\"");
-		String color = input.next(); //why won't nextline work here?
-		if (color.equalsIgnoreCase("help")) {
+		String color = input.next(); // why won't nextline work here?
+		while (color.equalsIgnoreCase("help")) {
 			System.out.println("The ROYGBIV colors are red, orange, yellow, green, blue, indigo, and violet.");
 			System.out.println("Now please enter your favorite of those colors.");
 			color = input.next();
 		}
+		if (color.equalsIgnoreCase("quit")) {
+			System.out.println("Nobody likes a quitter...");
+			System.exit(0);
+		}
+
 		System.out.println("Please enter the number of siblings that you have:");
 		int siblings = input.nextInt();
-		
-		//Setting years until retirement
+
+		// Setting years until retirement
 		int retirementYears;
-		if (age%2 == 0) {
+		if (age % 2 == 0) {
 			retirementYears = 3;
-		} else { 
+		} else {
 			retirementYears = 37;
 		}
-		
-		
+
 		// Where you will retire
 		String vacationHome;
 		if (siblings == 0) {
@@ -48,14 +63,14 @@ public class FortuneTeller {
 		} else if (siblings > 3) {
 			vacationHome = ("Tampa Florida");
 		} else {
-			vacationHome = "Columbus, Ohio haha";
+			vacationHome = "Columbus, Ohio (haha)";
 		}
-		
-		// What you will drive 
+
+		// What you will drive
 		String transportation;
 		if (color.equalsIgnoreCase("red")) {
 			transportation = ("a red Ferrari");
-		} else  if (color.equalsIgnoreCase("orange")) {
+		} else if (color.equalsIgnoreCase("orange")) {
 			transportation = ("a VW bus");
 		} else if (color.equalsIgnoreCase("yellow")) {
 			transportation = ("a Ducati");
@@ -70,25 +85,27 @@ public class FortuneTeller {
 		} else {
 			transportation = ("your mom's old bike");
 		}
-		
+
 		// Your bank account balance
 		double bankAccount;
-		if (birthMonth > 0 && birthMonth <= 4 ) {
-			bankAccount =  95.34;
-		} else if (birthMonth > 4 && birthMonth <= 8 ) {
-			bankAccount =  584736.97;
-		} else if (birthMonth > 8 && birthMonth <= 12 ) {
-			bankAccount =  8000004.00;
+		if (birthMonth > 0 && birthMonth <= 4) {
+			bankAccount = 95.34;
+		} else if (birthMonth > 4 && birthMonth <= 8) {
+			bankAccount = 584736.97;
+		} else if (birthMonth > 8 && birthMonth <= 12) {
+			bankAccount = 8000004.00;
 		} else {
-			bankAccount =  0.00;
+			bankAccount = 0.00;
 		}
-		
-		//*[First Name]* *[Last Name]* will retire in *[# of years]* with *[bank balance]* in the bank, 
-		// a vacation home in *[location]*, and travel by *[mode of transporation]*.
-		
-		System.out.println(firstName.trim() + " " + lastName.trim() + " will retire in " + retirementYears + " years with $" + bankAccount + 
-				" in the bank, a vacation home in " + vacationHome + ", and travel by " + transportation + ".");
-		
+
+		// *[First Name]* *[Last Name]* will retire in *[# of years]* with *[bank
+		// balance]* in the bank,
+		// a vacation home in *[location]*, and travel by *[mode of transportation]*.
+
+		System.out.println(firstName.trim() + " " + lastName.trim() + " will retire in " + retirementYears
+				+ " years with $" + bankAccount + " in the bank, a vacation home in " + vacationHome
+				+ ", and travel by " + transportation + ".");
+
 	}
 
 }
