@@ -6,26 +6,42 @@ public class FortuneTeller {
 
 		Scanner input = new Scanner(System.in);
 
-		// Getting all the information
+		// Asking for first name
 		System.out.println("Please enter your first name:");
 		String firstName = input.next();
 		if (firstName.equalsIgnoreCase("quit")) {
 			System.out.println("Nobody likes a quitter...");
 			System.exit(0);
 		}
-
+		
+		//Asking for last name
 		System.out.println("Please enter your last name:");
 		String lastName = input.next();
 		if (lastName.equalsIgnoreCase("quit")) {
 			System.out.println("Nobody likes a quitter...");
 			System.exit(0);
 		}
-
+		
+		//Asking for age
 		System.out.println("Please enter your age:");
-		int age = input.nextInt();
+		String ageString = input.next();
+		if (ageString.equalsIgnoreCase("quit")) {
+			System.out.println("Nobody likes a quitter...");
+			System.exit(0);
+		}
+		int age = Integer.parseInt(ageString);
+		
+		//Asking for birth month
 		System.out.println("Please enter your birth month:");
-		int birthMonth = input.nextInt();
+		String birthMonthString = input.next();
+		if (birthMonthString.equalsIgnoreCase("quit")) {
+			System.out.println("Nobody likes a quitter...");
+			System.exit(0);
+		}
+		int birthMonth = Integer.parseInt(birthMonthString);
 
+		
+		//Asking for favorite color
 		System.out.println("Please enter your favorite ROYGBIV color");
 		System.out.println("If you do not know what ROYGBIV is, please type \"help\"");
 		String color = input.next(); // why won't nextline work here?
@@ -39,8 +55,14 @@ public class FortuneTeller {
 			System.exit(0);
 		}
 
+		// Asking for Siblings
 		System.out.println("Please enter the number of siblings that you have:");
-		int siblings = input.nextInt();
+		String siblingsString = input.next();
+		if (siblingsString.equalsIgnoreCase("quit")) {
+			System.out.println("Nobody likes a quitter...");
+			System.exit(0);
+		}
+		int siblings = Integer.parseInt(siblingsString);
 
 		// Setting years until retirement
 		int retirementYears;
