@@ -68,22 +68,26 @@ public class FortuneTeller {
 		} else if (color.equalsIgnoreCase("violet")) {
 			transportation = ("a hot air balloon");
 		} else {
-			transportation = ("Your mom's old bike");
+			transportation = ("your mom's old bike");
 		}
 		
 		// Your bank account balance
-		int bankAccount;
+		double bankAccount;
 		if (birthMonth > 0 && birthMonth <= 4 ) {
-			bankAccount = 95;
+			bankAccount =  95.34;
 		} else if (birthMonth > 4 && birthMonth <= 8 ) {
-			bankAccount = 584736;
+			bankAccount =  584736.97;
 		} else if (birthMonth > 8 && birthMonth <= 12 ) {
-			bankAccount = 1000000004;
+			bankAccount =  8000004.00;
 		} else {
-			bankAccount = 0;
+			bankAccount =  0.00;
 		}
 		
+		//*[First Name]* *[Last Name]* will retire in *[# of years]* with *[bank balance]* in the bank, 
+		// a vacation home in *[location]*, and travel by *[mode of transporation]*.
 		
+		System.out.println(firstName.trim() + " " + lastName.trim() + " will retire in " + retirementYears + " years with $" + bankAccount + 
+				" in the bank, a vacation home in " + vacationHome + ", and travel by " + transportation + ".");
 		
 	}
 
