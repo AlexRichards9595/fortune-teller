@@ -8,7 +8,7 @@ public class FortuneTeller {
 
 		// Asking for first name
 		System.out.println("Please enter your first name:");
-		String firstName = input.next();
+		String firstName = input.nextLine();
 		if (firstName.equalsIgnoreCase("quit")) {
 			System.out.println("Nobody likes a quitter...");
 			System.exit(0);
@@ -16,7 +16,7 @@ public class FortuneTeller {
 		
 		//Asking for last name
 		System.out.println("Please enter your last name:");
-		String lastName = input.next();
+		String lastName = input.nextLine();
 		if (lastName.equalsIgnoreCase("quit")) {
 			System.out.println("Nobody likes a quitter...");
 			System.exit(0);
@@ -24,7 +24,7 @@ public class FortuneTeller {
 		
 		//Asking for age
 		System.out.println("Please enter your age:");
-		String ageString = input.next();
+		String ageString = input.nextLine();
 		if (ageString.equalsIgnoreCase("quit")) {
 			System.out.println("Nobody likes a quitter...");
 			System.exit(0);
@@ -33,7 +33,7 @@ public class FortuneTeller {
 		
 		//Asking for birth month
 		System.out.println("Please enter your birth month:");
-		String birthMonthString = input.next();
+		String birthMonthString = input.nextLine();
 		if (birthMonthString.equalsIgnoreCase("quit")) {
 			System.out.println("Nobody likes a quitter...");
 			System.exit(0);
@@ -44,11 +44,11 @@ public class FortuneTeller {
 		//Asking for favorite color
 		System.out.println("Please enter your favorite ROYGBIV color");
 		System.out.println("If you do not know what ROYGBIV is, please type \"help\"");
-		String color = input.next(); // why won't nextline work here?
+		String color = input.nextLine(); // why won't nextline work here?
 		while (color.equalsIgnoreCase("help")) {
 			System.out.println("The ROYGBIV colors are red, orange, yellow, green, blue, indigo, and violet.");
 			System.out.println("Now please enter your favorite of those colors.");
-			color = input.next();
+			color = input.nextLine();
 		}
 		if (color.equalsIgnoreCase("quit")) {
 			System.out.println("Nobody likes a quitter...");
@@ -57,7 +57,7 @@ public class FortuneTeller {
 
 		// Asking for Siblings
 		System.out.println("Please enter the number of siblings that you have:");
-		String siblingsString = input.next();
+		String siblingsString = input.nextLine();
 		if (siblingsString.equalsIgnoreCase("quit")) {
 			System.out.println("Nobody likes a quitter...");
 			System.exit(0);
